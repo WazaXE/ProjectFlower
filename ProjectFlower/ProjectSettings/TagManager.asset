@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Voidground
+    uniqueID: 815743981
+    locked: 0
+  - name: Depthground
+    uniqueID: 472835453
+    locked: 0
+  - name: Background
+    uniqueID: 1502921429
+    locked: 0
+  - name: Player
+    uniqueID: 2585880623
+    locked: 0
+  - name: Forground
+    uniqueID: 3615417169
+    locked: 0
+  - name: Frontground
+    uniqueID: 2779937229
+    locked: 0
