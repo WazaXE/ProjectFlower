@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour
 
     public bool Fr = true;
 
+
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+
+
+
     private Rigidbody2D rb;
 
     void Start(){
@@ -17,6 +25,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate(){
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
