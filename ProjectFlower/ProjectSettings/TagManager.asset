@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -47,7 +47,7 @@ TagManager:
   - name: Depthground
     uniqueID: 472835453
     locked: 0
-  - name: Background
+  - name: Ground
     uniqueID: 1502921429
     locked: 0
   - name: Player
