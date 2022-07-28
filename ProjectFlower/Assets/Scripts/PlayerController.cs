@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    public int moreJump;
+
 
 
     private Rigidbody2D rb;
@@ -40,6 +42,12 @@ public class PlayerController : MonoBehaviour
         
         }
     }
+
+    void Update()
+    {
+
+    }
+
     void Flip(){
         Fr = !Fr;
         Vector3 Scaler = transform.localScale;
