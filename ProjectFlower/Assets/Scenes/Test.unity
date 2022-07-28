@@ -1798,8 +1798,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   moreJumpValue: 1
-  jumpTime: 0.35
+  jumpTime: 1
   isJumping: 0
+  animator: {fileID: 123279912}
 --- !u!58 &123279916
 CircleCollider2D:
   m_ObjectHideFlags: 0

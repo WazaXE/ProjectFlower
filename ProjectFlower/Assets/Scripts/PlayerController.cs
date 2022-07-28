@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
+
+    public Animator animator;
+
     void Start(){
         moreJump = moreJumpValue;
 
@@ -49,6 +52,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
+
+        animator.SetFloat("IsMoving", Mathf.Abs(speed));
 
         if(isGrounded == true){
             moreJump = moreJumpValue;
