@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 0
+  jumpForce: 5
   moveInput: 0
   Fr: 1
   groundCheck: {fileID: 1876422567}
@@ -1797,6 +1797,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  moreJumpValue: 1
+  jumpTime: 0.35
+  isJumping: 0
 --- !u!58 &123279916
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1845,7 +1848,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5d53c4d8e5c7a0c448ad2538522c545c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1

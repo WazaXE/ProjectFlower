@@ -16,13 +16,18 @@ public class PlayerController : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    public int moreJump;
-
+    private int moreJump;
+    public int moreJumpValue;
+    private float jumpTimeCounter;
+    public float jumpTime;
+    public bool isJumping;
 
 
     private Rigidbody2D rb;
 
     void Start(){
+        moreJump = moreJumpValue;
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -43,9 +48,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Update()
-    {
+    void Update(){
 
+        if(isGrounded == true){
+            moreJump = moreJumpValue;
+        }
+
+        if (Input.GetButton("Jump") && isJumping == true){
+            if(jumpTimeCounter >0){
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }else{
+                isJumping = false;
+            }
+            
+        }
+        if (Input.GetButton("Jump")){
+            isJumping = false;
+        }
+
+        if (Input.GetButtonDown("Jump") && moreJump > 0){
+            rb.velocity = Vector2.up * jumpForce;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            moreJump--;
+        } else if(Input.GetButtonDown("Jump") && moreJump == 0 && isGrounded == true){
+            rb.velocity = Vector2.up * jumpForce;
+
+
+
+
+        }
     }
 
     void Flip(){
